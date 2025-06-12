@@ -1,9 +1,0 @@
-2025-06-11 15:04:57,848 - physics_features - INFO - logging_system:118 - ============================================================
-2025-06-11 15:04:57,848 - physics_features - INFO - logging_system:119 - PHYSICS FEATURES SESSION STARTED - 20250611_150457
-2025-06-11 15:04:57,848 - physics_features - INFO - logging_system:120 - ============================================================
-2025-06-11 15:04:57,849 - physics_features - INFO - logging_system:129 - Session configuration saved to: /Users/ali/Desktop/Deep Fake Detection Project/deepfake-detection/scripts/output/session_config_20250611_150457.json
-2025-06-11 15:04:57,849 - physics_features - INFO - logging_system:145 - Python executable: /Users/ali/Desktop/Deep Fake Detection Project/Deepfake-Detection-Voice-Authentication-Framework/venv/bin/python3
-2025-06-11 15:04:57,849 - physics_features - INFO - logging_system:146 - Working directory: /Users/ali/Desktop/Deep Fake Detection Project/deepfake-detection
-2025-06-11 15:04:57,849 - physics_features - INFO - logging_system:147 - Device configuration: cpu
-2025-06-11 15:04:57,849 - physics_features - INFO - logging_system:149 - Audio sample rate: 16000
-2025-06-11 15:04:57,849 - physics_features - INFO - logging_system:151 - Physics window: 100ms

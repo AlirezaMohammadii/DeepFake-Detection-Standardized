@@ -1,0 +1,39 @@
+# Production Configuration for Deepfake Detection Framework
+# This file overrides default settings for production environment
+
+# Data Configuration - Production optimized
+data:
+  batch_size: 16
+  max_file_size_mb: 500
+
+# Model Configuration - Production settings
+model:
+  device: "cuda"  # Prefer GPU in production
+  feature_extraction:
+    chunk_size: 8192  # Larger chunks for better performance
+
+# Security Configuration - Stricter in production
+security:
+  max_memory_gb: 24.0
+  max_processing_time_s: 1200.0
+  allow_path_traversal: false
+  enable_input_validation: true
+
+# Logging Configuration - Less verbose in production
+logging:
+  level: "WARNING"
+  console: false
+  max_size_mb: 500
+  backup_count: 10
+
+# Processing Configuration - Higher concurrency
+processing:
+  concurrent_files: 8
+  checkpoint_interval: 50
+
+# Output Configuration - Optimized for production
+output:
+  format: "json"
+  include_features: false  # Reduce output size
+  include_uncertainty: true
+  visualization: false  # Disable visualization in production 

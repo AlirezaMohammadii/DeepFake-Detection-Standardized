@@ -1,0 +1,27 @@
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:124 - ============================================================
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:125 - PHYSICS FEATURES SESSION STARTED - 20250611_154220
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:126 - ============================================================
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:135 - Session configuration saved to: /Users/ali/Desktop/Deep Fake Detection Project/deepfake-detection/scripts/output/session_config_20250611_154220.json
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:151 - Python executable: /Users/ali/Desktop/Deep Fake Detection Project/Deepfake-Detection-Voice-Authentication-Framework/venv/bin/python3
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:152 - Working directory: /Users/ali/Desktop/Deep Fake Detection Project/deepfake-detection
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:153 - Device configuration: cpu
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:155 - Audio sample rate: 16000
+2025-06-11 15:42:20,106 - physics_features - INFO - logging_system:157 - Physics window: 100ms
+2025-06-11 15:42:39,976 - physics_features - INFO - logging_system:202 - Creating physics analysis plots...
+2025-06-11 15:42:40,924 - physics_features - INFO - logging_system:260 - Physics analysis plots saved to: /Users/ali/Desktop/Deep Fake Detection Project/deepfake-detection/inference/visualization/physics_analysis
+2025-06-11 15:42:40,924 - physics_features - INFO - logging_system:371 - Creating feature analysis summary...
+2025-06-11 15:42:40,925 - physics_features - INFO - logging_system:431 - Feature summary saved to: /Users/ali/Desktop/Deep Fake Detection Project/deepfake-detection/scripts/output/feature_summaries/feature_summary_20250611_154220.json
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:506 - ============================================================
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:507 - PHYSICS FEATURES SESSION COMPLETED
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:508 - ============================================================
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - total: 100
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - processed: 100
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - successful: 100
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - failed: 0
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - elapsed_time: 19.462507009506226
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - avg_time_per_file: 0.19462507009506225
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - success_rate: 100.0
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - total_results: 100
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - output_file: /Users/ali/Desktop/Deep Fake Detection Project/deepfake-detection/results/physics_features_summary.csv
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:511 - session_duration_minutes: 0.34700034856796264
+2025-06-11 15:42:40,926 - physics_features - INFO - logging_system:522 - Session completed - ID: 20250611_154220

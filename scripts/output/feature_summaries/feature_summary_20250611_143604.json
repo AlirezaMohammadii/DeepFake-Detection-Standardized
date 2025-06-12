@@ -1,0 +1,83 @@
+{
+  "session_info": {
+    "session_id": "20250611_143604",
+    "timestamp": "2025-06-11T14:36:23.994377",
+    "total_files": 100,
+    "successful_files": 100
+  },
+  "file_type_distribution": {
+    "genuine": 70,
+    "deepfake_tts": 30
+  },
+  "processing_stats": {},
+  "physics_feature_stats": {
+    "physics_delta_ft_revised": {
+      "mean": 0.08018884260207415,
+      "std": 0.025990231157764707,
+      "min": 0.04694129899144173,
+      "max": 0.15315015614032745,
+      "count": 100
+    },
+    "physics_delta_fr_revised": {
+      "mean": 7.198619251251221,
+      "std": 0.2504276698538514,
+      "min": 6.443492412567139,
+      "max": 7.764342308044434,
+      "count": 100
+    },
+    "physics_delta_fv_revised": {
+      "mean": 1.6243873035907745,
+      "std": 0.7113627935524668,
+      "min": 0.6553707122802734,
+      "max": 3.1495137214660645,
+      "count": 100
+    },
+    "physics_delta_f_total_revised": {
+      "mean": 8.903195447921753,
+      "std": 0.7218458775797174,
+      "min": 7.585677623748779,
+      "max": 10.38766860961914,
+      "count": 100
+    },
+    "physics_embedding_mean_velocity_mag": {
+      "mean": 402.58819442749024,
+      "std": 54.24529973867175,
+      "min": 217.6144561767578,
+      "max": 488.2027587890625,
+      "count": 100
+    },
+    "physics_doppler_proxy_fs": {
+      "mean": 17.806390895843506,
+      "std": 1.4436917551594348,
+      "min": 15.171355247497559,
+      "max": 20.77533721923828,
+      "count": 100
+    }
+  },
+  "audio_characteristics": {
+    "audio_duration_s": {
+      "mean": 3.0,
+      "median": 3.0,
+      "range": [
+        3.0,
+        3.0
+      ]
+    },
+    "hubert_seq_len_frames": {
+      "mean": 149.0,
+      "median": 149.0,
+      "range": [
+        149.0,
+        149.0
+      ]
+    },
+    "hubert_embedding_dim": {
+      "mean": 1024.0,
+      "median": 1024.0,
+      "range": [
+        1024.0,
+        1024.0
+      ]
+    }
+  }
+}

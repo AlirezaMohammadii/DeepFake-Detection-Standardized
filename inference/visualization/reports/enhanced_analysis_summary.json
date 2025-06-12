@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-12T17:02:45.232677",
+    "total_samples": 100,
+    "genuine_samples": 70,
+    "deepfake_samples": 30,
+    "success_rate": 100.0,
+    "analysis_version": "2.0_enhanced"
+  },
+  "physics_features_summary": {
+    "physics_delta_ft_revised": {
+      "overall_stats": {
+        "mean": 0.08018884260207411,
+        "std": 0.025990231157764714,
+        "min": 0.0469412989914417,
+        "max": 0.1531501561403274
+      },
+      "genuine_stats": {
+        "mean": 0.08182531850678576,
+        "std": 0.026692465674941605,
+        "count": 70
+      },
+      "deepfake_stats": {
+        "mean": 0.07637039882441357,
+        "std": 0.024273717432262917,
+        "count": 30
+      },
+      "discrimination_potential": 0.213819704696927,
+      "statistical_significance": 0.3386975321574456,
+      "practical_significance": "Medium"
+    },
+    "physics_delta_fr_revised": {
+      "overall_stats": {
+        "mean": 7.198619251251221,
+        "std": 0.2504276698538514,
+        "min": 6.443492412567139,
+        "max": 7.764342308044434
+      },
+      "genuine_stats": {
+        "mean": 7.209503786904471,
+        "std": 0.2397615477388681,
+        "count": 70
+      },
+      "deepfake_stats": {
+        "mean": 7.173222001393636,
+        "std": 0.2763392251564595,
+        "count": 30
+      },
+      "discrimination_potential": 0.14024782578751857,
+      "statistical_significance": 0.5095031113693667,
+      "practical_significance": "Low"
+    },
+    "physics_delta_fv_revised": {
+      "overall_stats": {
+        "mean": 1.6243873035907745,
+        "std": 0.7113627935524668,
+        "min": 0.6553707122802734,
+        "max": 3.1495137214660645
+      },
+      "genuine_stats": {
+        "mean": 1.635287286554064,
+        "std": 0.693733973824337,
+        "count": 70
+      },
+      "deepfake_stats": {
+        "mean": 1.5989540100097657,
+        "std": 0.762539588799833,
+        "count": 30
+      },
+      "discrimination_potential": 0.049843368712710515,
+      "statistical_significance": 0.8162960528270137,
+      "practical_significance": "Low"
+    },
+    "physics_delta_f_total_revised": {
+      "overall_stats": {
+        "mean": 8.903195447921753,
+        "std": 0.7218458775797173,
+        "min": 7.585677623748779,
+        "max": 10.38766860961914
+      },
+      "genuine_stats": {
+        "mean": 8.926616450718472,
+        "std": 0.6759446934499803,
+        "count": 70
+      },
+      "deepfake_stats": {
+        "mean": 8.848546441396078,
+        "std": 0.8290191004791159,
+        "count": 30
+      },
+      "discrimination_potential": 0.10321747033796434,
+      "statistical_significance": 0.6226057958933411,
+      "practical_significance": "Low"
+    }
+  },
+  "statistical_analysis": [
+    {
+      "feature": "physics_delta_ft_revised",
+      "p_value": 0.3386975321574456,
+      "effect_size": 0.2098032725452785,
+      "significant": "False",
+      "mann_whitney_p": 0.33754554481068955,
+      "ks_test_p": 0.5527165605834472,
+      "percent_difference": -6.666542559097785,
+      "interpretation": "Small"
+    },
+    {
+      "feature": "physics_delta_fr_revised",
+      "p_value": 0.5095031113693667,
+      "effect_size": 0.14446770394048283,
+      "significant": "False",
+      "mann_whitney_p": 0.61693568013924,
+      "ks_test_p": 0.4823513837191177,
+      "percent_difference": -0.5032494133193743,
+      "interpretation": "Negligible"
+    },
+    {
+      "feature": "physics_delta_fv_revised",
+      "p_value": 0.8162960528270137,
+      "effect_size": 0.05083104675938195,
+      "significant": "False",
+      "mann_whitney_p": 0.7435187572132487,
+      "ks_test_p": 0.4171770171317863,
+      "percent_difference": -2.2218283504705205,
+      "interpretation": "Negligible"
+    },
+    {
+      "feature": "physics_delta_f_total_revised",
+      "p_value": 0.6226057958933411,
+      "effect_size": 0.10773942383683227,
+      "significant": "False",
+      "mann_whitney_p": 0.3607717276771496,
+      "ks_test_p": 0.06759865158166942,
+      "percent_difference": -0.8745755993146793,
+      "interpretation": "Negligible"
+    }
+  ],
+  "key_findings": [],
+  "discrimination_ranking": [
+    {
+      "feature": "physics_delta_ft_revised",
+      "feature_name": "Translational Frequency (\u0394f_t)",
+      "discrimination_score": 0.213819704696927,
+      "p_value": 0.3386975321574456,
+      "combined_score": 0.10053545238505181,
+      "interpretation": "Lower values indicate stable voice characteristics"
+    },
+    {
+      "feature": "physics_delta_fr_revised",
+      "feature_name": "Rotational Frequency (\u0394f_r)",
+      "discrimination_score": 0.14024782578751857,
+      "p_value": 0.5095031113693667,
+      "combined_score": 0.041072018890592775,
+      "interpretation": "Higher values indicate algorithmic artifacts (strongest discriminator)"
+    },
+    {
+      "feature": "physics_delta_f_total_revised",
+      "feature_name": "Total Frequency (\u0394f_total)",
+      "discrimination_score": 0.10321747033796434,
+      "p_value": 0.6226057958933411,
+      "combined_score": 0.021240797123681196,
+      "interpretation": "Composite measure of all dynamics"
+    },
+    {
+      "feature": "physics_delta_fv_revised",
+      "feature_name": "Vibrational Frequency (\u0394f_v)",
+      "discrimination_score": 0.049843368712710515,
+      "p_value": 0.8162960528270137,
+      "combined_score": 0.004393807764188011,
+      "interpretation": "Reflects synthesis algorithm stability"
+    }
+  ],
+  "recommendations": [
+    "\ud83d\udd0d Translational Frequency (\u0394f_t) requires further investigation",
+    "\ud83d\udcca Increase sample size to ~126 for 80% statistical power",
+    "\ud83d\udd2c Consider multivariate analysis combining top discriminating features",
+    "\ud83e\udd16 Evaluate machine learning models for feature combination"
+  ]
+}

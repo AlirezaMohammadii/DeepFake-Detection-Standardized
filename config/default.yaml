@@ -1,0 +1,56 @@
+# Default Configuration for Deepfake Detection Framework
+# This file contains the default settings for the system
+
+# Data Configuration
+data:
+  input_dir: "data"
+  output_dir: "results"
+  supported_formats: [".wav", ".mp3", ".flac", ".m4a"]
+  max_file_size_mb: 200
+  batch_size: 8
+
+# Model Configuration
+model:
+  device: "auto"  # auto, cpu, cuda
+  feature_extraction:
+    enable_physics_features: true
+    enable_spectral_features: true
+    enable_temporal_features: true
+    sample_rate: 16000
+    chunk_size: 4096
+
+# Security Configuration
+security:
+  max_memory_gb: 12.0
+  max_processing_time_s: 600.0
+  allow_path_traversal: false
+  enable_input_validation: true
+
+# Bayesian Engine Configuration
+bayesian:
+  enable: true
+  uncertainty_threshold: 0.7
+  temporal_buffer_size: 10
+  causal_analysis: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/deepfake_detection.log"
+  console: true
+  max_size_mb: 100
+  backup_count: 5
+
+# Processing Configuration
+processing:
+  concurrent_files: 4
+  enable_checkpoints: true
+  checkpoint_interval: 10
+  resume_from_checkpoint: true
+
+# Output Configuration
+output:
+  format: "csv"  # csv, json, pickle
+  include_features: true
+  include_uncertainty: true
+  visualization: true 

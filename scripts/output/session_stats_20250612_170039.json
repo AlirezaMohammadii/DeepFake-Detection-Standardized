@@ -1,0 +1,16 @@
+{
+  "session_id": "20250612_170039",
+  "completion_time": "2025-06-12T17:02:46.223804",
+  "final_stats": {
+    "total": 100,
+    "processed": 100,
+    "successful": 100,
+    "failed": 0,
+    "elapsed_time": 125.17081475257874,
+    "avg_time_per_file": 1.2517081475257874,
+    "success_rate": 100.0,
+    "total_results": 100,
+    "output_file": "/Users/ali/Desktop/Deep Fake Detection Project/deepfake-detection/results/physics_features_summary.csv",
+    "session_duration_minutes": 2.1107746839523314
+  }
+}

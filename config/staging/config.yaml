@@ -1,0 +1,165 @@
+# Staging Environment Configuration
+# Balance between development flexibility and production stability
+
+config_version: "1.0.0"
+environment: "staging"
+
+# Device Configuration
+device:
+  preferred_device: "auto"
+  device_fallback_order: ["cuda", "mps", "cpu"]
+  gpu_memory_fraction: 0.8
+  enable_mixed_precision: true
+  cpu_threads: null
+  cpu_usage_threshold: 75.0
+  cpu_critical_threshold: 88.0
+  max_concurrent_processes: 4
+  cpu_concurrency_limit: 2
+  gpu_concurrency_limit: 8
+
+# Audio Processing
+audio:
+  sample_rate: 16000
+  chunk_size: 4096
+  segment_duration_s: 2.0
+  n_mels: 80
+  n_fft: 512
+  hop_length: 160
+  win_length: 400
+  n_lfcc: 20
+  overlap_ratio: 0.75
+  preemphasis_coeff: 0.97
+  min_duration_s: 0.1
+  max_duration_s: 20.0
+  silence_threshold: 0.01
+
+# Security and Resource Limits
+security:
+  max_memory_gb: 8.0
+  memory_warning_threshold_gb: 6.0
+  enable_memory_monitoring: true
+  max_processing_time_s: 300.0
+  model_load_timeout_s: 120.0
+  inference_timeout_s: 45.0
+  max_file_size_mb: 150.0
+  max_filename_length: 255
+  max_path_length: 260
+  allowed_file_extensions: [".wav", ".mp3", ".flac", ".m4a", ".ogg"]
+  enable_file_validation: true
+  enable_path_traversal_protection: true
+  quarantine_suspicious_files: true
+  monitoring_interval_s: 1.5
+  enable_resource_limiting: true
+
+# Bayesian Configuration
+bayesian:
+  enable_temporal_modeling: true
+  enable_hierarchical_modeling: true
+  enable_causal_analysis: true
+  inference_method: "variational"
+  temporal_window_size: 15
+  max_temporal_history: 30
+  prior_authentic_prob: 0.7
+  uncertainty_threshold: 0.08
+  confidence_threshold: 0.8
+  delta_fr_low_threshold: 0.28
+  delta_fr_high_threshold: 0.72
+  delta_ft_low_threshold: 0.009
+  delta_ft_high_threshold: 0.055
+  delta_fv_low_threshold: 0.18
+  delta_fv_high_threshold: 0.52
+  user_weight: 0.3
+  session_weight: 0.4
+  audio_weight: 0.3
+  user_adaptation_rate: 0.08
+  min_samples_for_adaptation: 5
+  session_timeout_s: 3600
+  low_risk_threshold: 0.82
+  medium_risk_threshold: 0.45
+  same_state_prob: 0.72
+  adjacent_state_prob: 0.23
+  distant_state_prob: 0.05
+
+# Feature Extraction
+features:
+  batch_size: 8
+  enable_length_bucketing: true
+  max_batch_duration_s: 80.0
+  enable_hubert_features: true
+  enable_mel_spectrogram: true
+  enable_lfcc_features: true
+  enable_physics_features: true
+  embedding_dim_for_physics: 1024
+  physics_window_size_ms: 100
+  physics_overlap_ratio: 0.5
+  max_rotation_angle_rad: 0.1
+  vibration_amplitude_scale: 0.05
+  enable_bessel_features: true
+  max_pca_components: 10
+  enable_feature_validation: true
+  nan_handling_strategy: "replace"
+  feature_normalization: true
+
+# Paths
+paths:
+  data_dir: "data"
+  results_dir: "results_staging"
+  cache_dir: "cache_staging"
+  logs_dir: "logs"
+  models_dir: "models"
+  quarantine_dir: "quarantine"
+  results_filename_pattern: "staging_features_{timestamp}.csv"
+  log_filename_pattern: "staging_deepfake_{date}.log"
+  cache_filename_pattern: "staging_features_{hash}.pkl"
+  create_dirs_if_missing: true
+  dir_permissions: 0o755
+  file_permissions: 0o644
+
+# Model Configuration
+models:
+  hubert_model_path: "facebook/hubert-large-ls960-ft"
+  hubert_processor_path: null
+  local_models_dir: "models"
+  enable_model_cache: true
+  enable_feature_cache: true
+  cache_expiry_hours: 48
+  max_cache_size_gb: 5.0
+  cache_cleanup_threshold: 0.8
+  model_load_timeout_s: 180.0
+  enable_model_warm_up: true
+  model_precision: "float32"
+
+# Monitoring and Logging
+monitoring:
+  log_level: "info"
+  enable_console_logging: true
+  enable_file_logging: true
+  log_rotation_size_mb: 50
+  log_backup_count: 7
+  system_monitor_interval_s: 7.0
+  health_check_interval_s: 45.0
+  metrics_export_interval_s: 90.0
+  memory_health_threshold: 0.82
+  cpu_health_threshold: 0.82
+  disk_health_threshold: 0.92
+  enable_alerts: true
+  alert_cooldown_s: 450
+
+# Physics Features
+physics:
+  dynamics_thresholds:
+    delta_fr_revised: [0.28, 0.72]
+    delta_ft_revised: [0.009, 0.055]
+    delta_fv_revised: [0.18, 0.52]
+  spectral_rolloff_threshold: 0.95
+  phase_space_bins: 60
+  phase_space_range: [-2.0, 2.0]
+  enable_bessel_analysis: true
+  bessel_order_max: 12
+  velocity_smoothing_window: 5
+  doppler_frequency_range: [50.0, 8000.0]
+
+# Output Configuration
+output_format: "csv"
+enable_visualization: true
+save_intermediate_results: false 

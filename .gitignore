@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project Specific
+cache/*.pkl
+results/*.csv
+logs/*.log
+output/*.json
+plots/*.png
+plots/*.html
+quarantine/
+checkpoints/
+data/
+precise_reset_log_*.json
+
+# Large model files (if any)
+*.bin
+*.pt
+*.pth
+
+# Temporary files
+*.tmp
+*.temp
+.cache_lock
+
+# Environment variables
+.env

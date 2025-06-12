@@ -1,0 +1,166 @@
+# Production Environment Configuration
+# Optimized for performance, reliability, and security
+
+config_version: "1.0.0"
+environment: "production"
+
+# Device Configuration
+device:
+  preferred_device: "cuda"  # Prefer GPU for production
+  device_fallback_order: ["cuda", "cpu"]
+  gpu_memory_fraction: 0.9  # Use most GPU memory
+  gpu_device_ids: null  # Use all available GPUs
+  enable_mixed_precision: true  # Enable for performance
+  cpu_threads: null  # Auto-detect
+  cpu_usage_threshold: 80.0
+  cpu_critical_threshold: 90.0
+  max_concurrent_processes: 8  # Higher for production
+  cpu_concurrency_limit: 2
+  gpu_concurrency_limit: 16
+
+# Audio Processing
+audio:
+  sample_rate: 16000
+  chunk_size: 4096
+  segment_duration_s: 2.0
+  n_mels: 80
+  n_fft: 512
+  hop_length: 160
+  win_length: 400
+  n_lfcc: 20
+  overlap_ratio: 0.75
+  preemphasis_coeff: 0.97
+  min_duration_s: 0.1
+  max_duration_s: 30.0
+  silence_threshold: 0.01
+
+# Security and Resource Limits
+security:
+  max_memory_gb: 12.0  # Higher limit for production
+  memory_warning_threshold_gb: 10.0
+  enable_memory_monitoring: true
+  max_processing_time_s: 600.0  # Longer timeout for complex files
+  model_load_timeout_s: 300.0
+  inference_timeout_s: 60.0
+  max_file_size_mb: 200.0  # Larger files allowed
+  max_filename_length: 255
+  max_path_length: 260
+  allowed_file_extensions: [".wav", ".mp3", ".flac", ".m4a", ".ogg"]
+  enable_file_validation: true
+  enable_path_traversal_protection: true
+  quarantine_suspicious_files: true
+  monitoring_interval_s: 1.0  # Frequent monitoring for production
+  enable_resource_limiting: true
+
+# Bayesian Configuration
+bayesian:
+  enable_temporal_modeling: true
+  enable_hierarchical_modeling: true
+  enable_causal_analysis: true
+  inference_method: "variational"
+  temporal_window_size: 20  # Larger window for better accuracy
+  max_temporal_history: 50
+  prior_authentic_prob: 0.7
+  uncertainty_threshold: 0.05  # Strict threshold for production
+  confidence_threshold: 0.85  # High confidence required
+  delta_fr_low_threshold: 0.25  # Tighter thresholds
+  delta_fr_high_threshold: 0.75
+  delta_ft_low_threshold: 0.008
+  delta_ft_high_threshold: 0.06
+  delta_fv_low_threshold: 0.15
+  delta_fv_high_threshold: 0.55
+  user_weight: 0.3
+  session_weight: 0.4
+  audio_weight: 0.3
+  user_adaptation_rate: 0.05  # Slower, more conservative adaptation
+  min_samples_for_adaptation: 10
+  session_timeout_s: 7200  # 2 hours
+  low_risk_threshold: 0.85
+  medium_risk_threshold: 0.5
+  same_state_prob: 0.75
+  adjacent_state_prob: 0.2
+  distant_state_prob: 0.05
+
+# Feature Extraction
+features:
+  batch_size: 16  # Larger batches for efficiency
+  enable_length_bucketing: true
+  max_batch_duration_s: 120.0
+  enable_hubert_features: true
+  enable_mel_spectrogram: true
+  enable_lfcc_features: true
+  enable_physics_features: true
+  embedding_dim_for_physics: 1024
+  physics_window_size_ms: 100
+  physics_overlap_ratio: 0.5
+  max_rotation_angle_rad: 0.1
+  vibration_amplitude_scale: 0.05
+  enable_bessel_features: true
+  max_pca_components: 12  # More components for better analysis
+  enable_feature_validation: true
+  nan_handling_strategy: "replace"
+  feature_normalization: true
+
+# Paths
+paths:
+  data_dir: "data"
+  results_dir: "results"
+  cache_dir: "cache"
+  logs_dir: "logs"
+  models_dir: "models"
+  quarantine_dir: "quarantine"
+  results_filename_pattern: "production_features_{timestamp}.csv"
+  log_filename_pattern: "production_deepfake_{date}.log"
+  cache_filename_pattern: "features_{hash}.pkl"
+  create_dirs_if_missing: true
+  dir_permissions: 0o755
+  file_permissions: 0o644
+
+# Model Configuration
+models:
+  hubert_model_path: "facebook/hubert-large-ls960-ft"
+  hubert_processor_path: null
+  local_models_dir: "models"
+  enable_model_cache: true
+  enable_feature_cache: true
+  cache_expiry_hours: 168  # 1 week
+  max_cache_size_gb: 10.0  # Larger cache for production
+  cache_cleanup_threshold: 0.9
+  model_load_timeout_s: 300.0
+  enable_model_warm_up: true  # Warm up for production
+  model_precision: "float16"  # Use FP16 for production efficiency
+
+# Monitoring and Logging
+monitoring:
+  log_level: "info"  # Less verbose for production
+  enable_console_logging: false  # Disable console logging
+  enable_file_logging: true
+  log_rotation_size_mb: 100
+  log_backup_count: 10  # Keep more backups
+  system_monitor_interval_s: 5.0
+  health_check_interval_s: 30.0
+  metrics_export_interval_s: 60.0
+  memory_health_threshold: 0.85
+  cpu_health_threshold: 0.85
+  disk_health_threshold: 0.95
+  enable_alerts: true  # Enable alerting in production
+  alert_cooldown_s: 600
+
+# Physics Features
+physics:
+  dynamics_thresholds:
+    delta_fr_revised: [0.25, 0.75]  # Tighter thresholds
+    delta_ft_revised: [0.008, 0.06]
+    delta_fv_revised: [0.15, 0.55]
+  spectral_rolloff_threshold: 0.95
+  phase_space_bins: 100  # More bins for higher precision
+  phase_space_range: [-2.0, 2.0]
+  enable_bessel_analysis: true
+  bessel_order_max: 15  # Higher order for production
+  velocity_smoothing_window: 7
+  doppler_frequency_range: [50.0, 8000.0]
+
+# Output Configuration
+output_format: "csv"
+enable_visualization: false  # Disabled for production efficiency
+save_intermediate_results: false  # Save storage in production 

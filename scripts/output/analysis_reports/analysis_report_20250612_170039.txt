@@ -1,0 +1,54 @@
+PHYSICS FEATURES ANALYSIS REPORT
+==================================================
+Generated: 2025-06-12T17:02:46.221910
+Session ID: 20250612_170039
+
+PROCESSING SUMMARY
+--------------------
+Total files processed: 100
+Successful extractions: 100
+Success rate: 100.0%
+
+FILE TYPE DISTRIBUTION
+--------------------
+genuine: 70 files
+deepfake_tts: 30 files
+
+PERFORMANCE METRICS
+--------------------
+Average processing time: 2.26s
+Total processing time: 225.7s
+Fastest file: 1.18s
+Slowest file: 3.76s
+
+PHYSICS FEATURES ANALYSIS
+------------------------------
+Delta Ft Revised:
+  Mean ± Std: 0.080189 ± 0.025990
+  Range: [0.046941, 0.153150]
+  Valid samples: 100
+
+Delta Fr Revised:
+  Mean ± Std: 7.198619 ± 0.250428
+  Range: [6.443492, 7.764342]
+  Valid samples: 100
+
+Delta Fv Revised:
+  Mean ± Std: 1.624387 ± 0.711363
+  Range: [0.655371, 3.149514]
+  Valid samples: 100
+
+Delta F Total Revised:
+  Mean ± Std: 8.903195 ± 0.721846
+  Range: [7.585678, 10.387669]
+  Valid samples: 100
+
+Embedding Mean Velocity Mag:
+  Mean ± Std: 402.588194 ± 54.245300
+  Range: [217.614456, 488.202759]
+  Valid samples: 100
+
+Doppler Proxy Fs:
+  Mean ± Std: 17.806391 ± 1.443692
+  Range: [15.171355, 20.775337]
+  Valid samples: 100
